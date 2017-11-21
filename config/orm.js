@@ -1,14 +1,14 @@
 var connection = require("../config/connection.js");
 
-// function printQuestionMarks(num) {
-//   var arr = [];
+function printQuestionMarks(num) {
+  var arr = [];
 
-//   for (var i = 0; i < num; i++) {
-//     arr.push("?");
-//   }
+  for (var i = 0; i < num; i++) {
+    arr.push("?");
+  }
 
-//   return arr.toString();
-// }
+  return arr.toString();
+}
 
 function objToSql(ob) {
   var arr = [];
@@ -51,7 +51,6 @@ var orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -71,5 +70,4 @@ var orm = {
   }
 };
 
-// Export the orm object for the model (cat.js).
 module.exports = orm;
